@@ -1,0 +1,20 @@
+Day 1
+
+Commands Learned:
+- pwd
+- ls
+- cd
+- mkdir
+- touch
+- nano
+- cat
+- chmod
+
+Mistakes:
+- Typed cad instead of cat.
+- Created "confings" instead of "configs".
+- Learned how to rename folders using mv.
+
+New Knowledge:
+- Linux projects should have a proper folder structure.
+- Bash scripts need execute permission (chmod +x).
