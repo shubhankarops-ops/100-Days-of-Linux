@@ -1,5 +1,9 @@
 # Day 2 - Linux File Management Notes
 
+## Goal
+ Learn how to manage files and directories
+ using Linux commands.
+
 ## Commands Learned
 - cp
 - mv
@@ -26,3 +30,11 @@
  These commands are commonly used to organize
  files, create backups, search for files,
  and manage directories efficiently in Linux systems.
+
+## Challenge Completed
+
+✅ Created files
+✅ Copied files
+✅ Moved files
+✅ Deleted files
+✅ Searched files
