@@ -1,0 +1,28 @@
+# Day 2 - Linux File Management Notes
+
+## Commands Learned
+- cp
+- mv
+- rm
+- find
+- history
+
+## Mistakes I Made
+- Typed `cl` instead of `cp`.
+- Typed `ls.archive` instead of `ls archive`.
+
+## How I Fixed Them
+- Corrected the command from `cl` to `cp`.
+- Used the correct syntax: `ls archive`.
+
+## What I Learned
+- `cp` copies files and directories.
+- `mv` moves or renames files and directories.
+- `rm` removes files.
+- `find` searches for files and directories.
+- `history` displays previously executed commands.
+
+## Real-world Use
+ These commands are commonly used to organize
+ files, create backups, search for files,
+ and manage directories efficiently in Linux systems.
