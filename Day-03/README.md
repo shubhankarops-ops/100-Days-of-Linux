@@ -4,7 +4,7 @@
 
 - ls -l
 - chmod +x
-- chomd -x 
+- chmod -x 
 
 # Goal 
 

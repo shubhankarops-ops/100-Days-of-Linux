@@ -1,0 +1,51 @@
+# Day 3 - Linux Permissions
+## Commands Learned
+ls -l – Show detailed information about files and folders.
+chmod +x – Add execute permission to a file.
+chmod -x – Remove execute permission from a file.
+
+## Mistakes I Made
+• Typed mkdit instead of mkdir.
+• Created folder noyes instead of notes.
+• Tried touch notes/linux_notes.txt
+• before creating the notes folder.
+• Typed `ls l` instead of `ls -l`.
+• Typed `chomd` instead of `chmod`.
+• Typed tesh.sh instead of test.sh.
+• Typed scripys instead of scripts.
+• Accidentally created RRADME.md instead of README.md.
+•Wrote chomd -x in the README instead of chmod -x.
+
+## How I Fixed Them
+• Corrected mkdit to mkdir.
+• Renamed noyes to notes using mv.
+• Created the notes folder first, then created
+linux_notes.txt.
+• Used the correct command ls -l.
+• Corrected chomd to chmod.
+• Corrected the filename from tesh.sh to test.sh.
+• Corrected the folder name from scripys to scripts.
+• Renamed RRADME.md to README.md.
+• Updated the README with the correct command.
+
+## What I Learned
+• ls -l shows detailed file information,
+including permissions.
+• chmod +x gives execute permission to a file.
+• chmod -x removes execute permission.
+• After removing execute permission
+with chmod -x, I could not run the
+script because Linux showed "Permission denied".
+• File and folder names must be typed exactly.
+Even a small spelling mistake causes an error.
+• Reading error messages carefully helps find
+the problem quickly.
+
+## Real-world Use
+Linux administrators, DevOps engineers,
+and cybersecurity engineers use file permissions to control
+who can read, modify, or execute files.
+
+For example, a backup script should only be executable
+by authorized users. If execute permission is removed,
+the script cannot be run, which helps improve system security.
