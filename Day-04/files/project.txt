@@ -1,0 +1,7 @@
+Day 4 Practical
+
+1. Checked the current user using whoami.
+2. Displayed user and group information using id.
+3. Practiced the syntax of chown.
+4. Practiced the syntax of chgrp.
+5. Learned about Linux file ownership and groups.
