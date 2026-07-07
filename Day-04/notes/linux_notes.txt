@@ -1,0 +1,51 @@
+# Day 4 - Linux Users and Ownership Notes
+
+## Commands Learned
+
+- whoami
+- id
+- chown
+- chgrp
+
+## Mistakes I Made
+
+- I expected my real username to
+appear, but Termux showed `u0_a865`.
+- I tried `chown user file.txt`, but
+the user did not exist.
+- I tried `sudo chown alice project.txt`,
+but Termux does not support sudo.
+- I tried `chgrp developers project.txt`,
+but the group did not exist.
+
+## How I Fixed Them
+
+- I used the `id` command to
+understand my current user and group.
+- I learned that Termux has only one Android app user.
+- I understood that `chown` and `chgrp`
+work properly on a full Linux system with multiple
+users and groups.
+
+## What I Learned
+
+Today I learned about Linux users and file ownership.
+
+At first, I was confused because I expected
+ to see my username, but I saw `u0_a865`.
+
+After understanding the concept, I realized that
+this is the Android user created for the Termux app.
+
+Now I know that `whoami` shows the current user,
+`id` shows user and group information,
+and `chown` and `chgrp` are mainly used on real
+Linux servers.
+
+## Real-world Use
+
+Linux administrators use these commands to control
+who can access or modify files.
+
+This helps improve security and manage
+permissions on servers.
