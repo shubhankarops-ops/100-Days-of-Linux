@@ -1,0 +1,60 @@
+# Day 5 - Reading File Content
+
+## Commands Learned
+
+- cat
+- head
+- tail
+- find
+
+## Mistakes I Made
+
+- I typed `head 5 notes.txt` instead of using `-5` or `-n 5`.
+- I wrote `notes.txy` instead of `notes.txt`.
+- I used `tail` with the wrong file name.
+- I mixed `find` with `head` by giving an
+extra file name after the pipe.
+
+## How I Fixed Them
+
+- I learned that `head` needs `-5` or `-n 5`
+to show a specific number of lines.
+- I corrected the file name from `notes.txy` to `notes.txt`.
+- I understood that spelling is important in Linux.
+- I learned that after using a pipe (`|`), `head`
+reads the output from the previous command,
+so I do not need to provide another file name.
+
+## What I Learned
+
+Today I learned how to read file content in different ways.
+
+`cat` shows the whole file.
+
+`head` shows the beginning of a file.
+
+`tail` shows the end of a file.
+
+I also learned that Linux follows exact spelling,
+so even a small typing mistake can cause an error.
+
+## My Observation
+
+I noticed that `head` and `tail` are very useful when
+I only need part of a file instead of reading everything.
+
+## Real-world Use
+
+Linux administrators use `head` and `tail`to quickly
+check configuration files and log files without opening
+the entire file.
+
+## Challenge Completed
+
+I created a text file with multiple lines.
+
+I used `cat`, `head`, and `tail`
+to view different parts of the file.
+
+I also fixed my command mistakes and understood
+why they happened.
