@@ -1,0 +1,48 @@
+# Day 6 - Reading Files in Linux
+
+## Commands Learned
+
+- cat
+- head
+- tail
+- mv
+
+## Mistakes I Made
+
+- I tried `cat story.txt` from the wrong directory.
+- I typed `cat statue.txt` instead of the correct filename.
+
+## How I Fixed Them
+
+- I used the correct path: `cat files/story.txt`.
+- I checked the filename and corrected the typing mistake.
+
+## What I Learned
+
+- `cat` displays the entire file.
+- `head` shows the beginning of a file.
+- `tail` shows the last part of a file.
+- Linux checks the exact filename and file path.
+- If a file is inside another folder,
+I must provide the correct path.
+
+## My Observation
+
+At first I thought the file was missing,
+but actually I was in the wrong location.
+I understood that Linux searches files based
+on the current directory and the path I provide.
+
+## Real-world Use
+
+These commands are used to read configuration files, 
+log files, and project files. System Administrators,
+DevOps Engineers, and Security Engineers use them every day.
+
+## Challenge Completed
+
+- Created a file.
+- Read the full file using `cat`.
+- Displayed the first and last lines using `head` and `tail`.
+- Renamed the file using `mv`.
+- Understood why file path is important in Linux.
