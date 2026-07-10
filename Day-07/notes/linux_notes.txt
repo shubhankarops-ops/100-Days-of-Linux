@@ -1,0 +1,55 @@
+# Day 7 - Counting File Content with wc
+
+## Commands Learned
+
+- wc -l
+- wc -w
+- wc -c
+- head -5
+- cat
+
+## Mistakes I Made
+
+- I typed:
+  wc -l 5 files/data.txt
+
+- I thought number 5 could be used with wc.
+
+## How I Fixed Them
+
+- I understood that wc does not take a number l
+like head or tail.
+- I used:
+
+  wc -l files/data.txt
+  wc -w files/data.txt
+  wc -c files/data.txt
+
+## What I Learned
+
+- wc -l counts lines.
+- wc -w counts words.
+- wc -c counts bytes (file size in bytes).
+- head can show only the first few lines.
+- cat prints the whole file.
+
+## My Observation
+
+At first I confused wc with head.
+Now I understand that head shows content, but wc only counts.
+
+If a file is very large, using wc is much better 
+than opening the whole file.
+
+## Real-world Use
+
+System Administrators and DevOps Engineers
+use wc to quickly check log files, reports,
+scripts, and configuration files
+without reading the entire file.
+
+## Challenge Completed
+
+I understood that for very large files, commands like wc,
+head, and tail are much more useful than cat because
+they save time and keep the terminal clean.
