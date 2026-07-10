@@ -1,0 +1,12 @@
+Linux
+Git
+Python
+Networking
+DevOps
+Security
+Docker
+Kubernetes
+AWS
+Cloud
+Bash
+Termux
