@@ -1,0 +1,51 @@
+# Day 8 - Combining Commands with Pipe
+
+## Commands Learned
+
+- head
+- tail
+- wc -l
+- wc -w
+- wc -c
+- |
+
+## Mistakes I Made
+
+- I typed `wc -w5` instead of `wc -w`.
+- I typed `wc -l6` instead of `wc -l`.
+- I typed `wc -c49` instead of `wc -c`.
+
+## How I Fixed Them
+
+- I learned that `wc` options do not take numbers after them.
+- The number should be used with `head` or `tail`, not wit
+ `wc`.
+- I corrected the commands and used the proper syntax.
+
+## What I Learned
+
+- `head` and `tail` show only part of a file.
+- `wc` counts lines, words, or bytes.
+- The pipe `|` sends the output of one command to
+another command.
+- Combining commands makes Linux more powerful.
+
+## My Observation
+
+At first, I mixed the options of `head` and `wc`.
+Now I understand that `head` uses numbers to
+choose how many lines to show, while `wc`
+only counts the output.
+
+## Real-world Use
+
+Linux administrators and DevOps engineers combine
+commands with pipes to analyze log files, count data,
+and process information quickly without opening
+the entire file.
+
+## Challenge Completed
+
+I created a file with 15 lines, viewed only the required lines,
+counted the lines, words, and bytes, and practiced
+combining `head` with `wc` using a pipe.
