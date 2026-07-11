@@ -1,0 +1,51 @@
+# Day 9 - Searching Text with grep
+
+## Commands Learned
+
+- grep
+- grep -n
+- grep -c
+- grep -i
+- grep -w
+
+## Mistakes I Made
+
+- I used `grep -n files/logs.txt` without writing
+the search word.
+- I used `grep -c DevSecOps` without giving the file name.
+
+## How I Fixed Them
+
+- I learned that `grep` needs both a search pattern
+and a file name.
+- I corrected the commands by writing the pattern
+first and then the file name.
+
+## What I Learned
+
+- `grep` searches for text inside a file.
+- `grep -n` shows line numbers.
+- `grep -c` counts how many lines match the pattern.
+- `grep -i` ignores uppercase and lowercase letters.
+- `grep -w` searches for the exact word only.
+
+## My Observation
+
+At first I forgot that `grep` needs both a search
+word and a file name.
+After practicing, I understood that each grep option
+has a different purpose and helps search text more
+efficiently.
+
+## Real-world Use
+
+Linux administrators, DevOps engineers, and Security engineers
+use `grep` to search log files, find errors,
+analyze configuration files, and quickly locate
+important information.
+
+## Challenge Completed
+
+I searched words, counted matching lines, displayed 
+line numbers, searched without case sensitivity,
+and learned how to find exact words using grep.
