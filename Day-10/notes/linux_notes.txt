@@ -1,0 +1,54 @@
+# Day 10 - Sorting and Removing Duplicate Lines
+
+## Commands Learned
+
+- sort
+- uniq
+- sort | uniq
+
+## Mistakes I Made
+
+- I typed `READMR.md` instead of `README.md`.
+- I typed `linux_noyes.txt` instead of `linux_notes.txt`.
+- I typed `filrs` instead of `files`.
+- I forgot to add the `.txt` extension to the file name.
+- I thought `sort` finds duplicate lines.
+- I thought `uniq` works like `cat`.
+
+## How I Fixed Them
+
+- I corrected the spelling mistakes.
+- I learned that `sort` only arranges lines in
+ alphabetical order.
+- I understood that `uniq` removes only consecutive
+ duplicate lines.
+- I learned that `sort | uniq` is the correct way to
+remove duplicate lines from an unsorted file.
+
+## What I Learned
+
+- `sort` arranges lines alphabetically.
+- `uniq` removes consecutive duplicate lines.
+- `sort | uniq` first sorts the file and then
+removes duplicate lines.
+- The order of commands in a pipe is important.
+
+## My Observation
+
+At first, I thought `sort` searched for duplicate lines
+and `uniq` worked like `cat`.
+After practicing, I understood that `sort`
+organizes the data, while `uniq`
+removes repeated consecutive lines.
+
+## Real-world Use
+
+System Administrators and DevOps Engineers
+use `sort` and `uniq` to organize large log files,
+remove duplicate entries, and prepare clean
+reports for analysis.
+
+## Challenge Completed
+
+I practiced `sort`, `uniq`, and `sort | uniq`
+and understood why the order of commands is important.
