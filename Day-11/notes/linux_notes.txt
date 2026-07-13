@@ -1,0 +1,49 @@
+## Commands Learned
+
+- cut
+- cut -d
+- cut -f
+- wc -l
+
+## Mistakes I Made
+
+- I used `cat -d` instead of `cut -d`.
+- I typed `cut` twice by mistake.
+- I wrote `user.txt` instead of `users.txt`.
+- I typed `vut` instead of `cut`.
+- I tried to read Field 3 when my file had only 2 fields.
+
+## How I Fixed Them
+
+- I used the correct command: `cut`.
+- I checked the file name carefully.
+- I corrected my typing mistakes.
+- I changed the file format to include
+ three fields separated by `:`.
+
+## What I Learned
+
+- `cut` extracts specific fields from a file.
+- `-d` sets the delimiter.
+- `-f` selects the field number.
+- If the requested field does not exist, `cut`
+returns no output.
+
+## My Observation
+
+The delimiter is very important.
+If I change the delimiter,
+the field numbers also change.
+I need to understand the file structure before using `cut`.
+
+## Real-world Use
+
+`cut` is useful for extracting usernames, log information,
+ CSV data, configuration values, and other
+structured text files.
+
+## Challenge Completed
+
+I successfully extracted names and skills using
+`cut -f1` and `cut -f2`. I also learned why Field 3
+was empty and fixed it by changing the file format.

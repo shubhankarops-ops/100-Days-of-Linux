@@ -1,5 +1,5 @@
-Shubhankar:Linux
-Rahul:Python
-Ankit:Networking
-Riya:DevOps
-Aman:Cybersecurity
+Shubhankar:Linux:I Love Linux
+Rahul:Python:I Love Linux
+Ankit:Networking:I Love Networking
+Riya:DevOps:My goal Devops
+Aman:CybersecurityMy:goal cybersecuritlMy
