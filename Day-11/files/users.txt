@@ -1,0 +1,5 @@
+Shubhankar:Linux
+Rahul:Python
+Ankit:Networking
+Riya:DevOps
+Aman:Cybersecurity
