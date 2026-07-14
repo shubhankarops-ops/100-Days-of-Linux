@@ -1,0 +1,54 @@
+# Day 12 - Linux echo and Output Redirection
+
+## Commands Learned
+
+- echo
+- >
+- >>
+- cat
+- wc -l
+
+## Mistakes I Made
+
+- At first, I was confused about the difference between
+ `>` and `>>`.
+- I thought `>` adds new text to the file,
+but I learned that it replaces the old content.
+
+## How I Fixed Them
+
+- I tested both commands on the same file.
+- I used `cat` after every command to see the result.
+- After testing, I clearly understood how both commands work.
+
+## What I Learned
+
+- `echo` prints text to the terminal.
+- `>` writes text to a file and replaces the old content.
+- `>>` adds new text to the end of a file without
+ removing the old content.
+- `cat` helps me verify the file contents after every change.
+
+## My Observation
+
+- `>` is useful when I want to start with fresh content.
+- `>>` is useful when I want to keep the old data
+and add new information.
+- Testing commands myself makes the concept much
+easier to remember.
+
+## Real-world Use
+
+- `>` is used to create or overwrite configuration files.
+- `>>` is used to append logs, notes,
+or script output without deleting previous data.
+- These commands are very common in Bash scripting,
+Linux administration, and DevOps automation.
+
+## Challenge Completed
+
+✅ I understood that:
+
+- `echo "Python" > files/info.txt`
+
+Final output:
