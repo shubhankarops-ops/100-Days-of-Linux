@@ -1,0 +1,5 @@
+Linux
+Git
+Python
+Networking
+Docker

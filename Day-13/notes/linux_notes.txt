@@ -1,0 +1,58 @@
+# Day 13 - Linux diff Command
+
+## Commands Learned
+
+- diff
+- cat
+- nano
+- man diff
+
+## Mistakes I Made
+
+- I accidentally created `files1.txt` and `files2.txt`
+ instead of `file1.txt` and `file2.txt`.
+- My file contents were not the same at first because
+ of different words, uppercase/lowercase letters,
+ and spelling mistakes.
+- I was confused by the `diff` output in the beginning.
+
+## How I Fixed Them
+
+- I edited both files several times using `nano`.
+- I compared the files after every change using the
+ `diff` command.
+- Finally, I made both files exactly the same and
+ tested again.
+
+## What I Learned
+
+- `diff` compares two files line by line.
+- If the files are different, `diff` shows which
+ lines were added, removed, or changed.
+- If both files are exactly the same, `diff` shows no output.
+- Even a small difference, like a spelling mistake
+ or uppercase/lowercase change, is detected.
+
+## My Observation
+
+- The best way to understand `diff` is by changing
+ one line at a time and checking the output.
+- I learned that no output from `diff`
+ means both files are identical.
+- Practicing with different examples helped me
+ understand the command much better.
+
+## Real-world Use
+
+- Compare source code before updating a project.
+- Check changes in configuration files.
+- Compare notes or documents.
+- Find differences between backup and original files.
+
+## Challenge Completed
+
+✅ I tested `diff` with identical files and confirmed
+that it shows no output.
+
+✅ I understood that `diff` is very useful for comparing
+source code and finding changes between files.
