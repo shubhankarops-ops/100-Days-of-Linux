@@ -1,0 +1,56 @@
+# Day 14 - Linux paste Command
+
+## Commands Learned
+
+- paste
+- cat
+- wc -l
+- nano
+
+## Mistakes I Made
+
+- I did not make any command mistakes today.
+- I tested what happens when one file has
+ fewer lines than the other.
+
+## How I Fixed Them
+
+- I edited `skills.txt` using `nano`.
+- I ran the `paste` command again and compared the output.
+- I understood how `paste` behaves when the number
+ of lines is different.
+
+## What I Learned
+
+- `paste` combines two files line by line.
+- The first line of the first file is joined
+ with the first line of the second file.
+- If one file has fewer lines, the remaining
+ lines from the longer file are shown without matching data.
+
+## My Observation
+
+- `paste` is very useful when two related files
+ need to be combined.
+- Testing different numbers of lines helped me
+ understand the command much better.
+
+## Real-world Use
+
+- Combine employee names with departments.
+- Combine usernames with email addresses.
+- Combine server names with IP addresses.
+- Combine students with their marks.
+
+## Challenge Completed
+
+✅ I tested `paste` with files of different lengths.
+
+Example:
+
+```text
+Shubhankar    Linux
+Rahul         Python
+Ankit         Networking
+Riya
+Aman
