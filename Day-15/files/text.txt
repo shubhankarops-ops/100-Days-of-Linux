@@ -1,0 +1,8 @@
+123
+Linux
+Git
+python
+Networking
+DevSecOps
+docker
+DevOps

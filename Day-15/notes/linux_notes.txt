@@ -1,0 +1,52 @@
+# Day 15 - Linux tr Command
+
+## Commands Learned
+
+- tr
+- cat
+- echo
+- |
+
+## Mistakes I Made
+
+- I typed `catt` instead of `cat`.
+- I used `•` instead of `|` for the pipe symbol.
+- I tried `tr 'a-z' 'A-Z' files/text.txt`, but `tr`
+ reads input from standard input.
+- I thought `tr` works only with letters.
+  Later I learned it can also replace numbers
+ and other characters.
+
+## How I Fixed Them
+
+- I corrected the command names.
+- I used the correct pipe symbol (`|`).
+- I used `cat files/text.txt | tr 'A-Z' 'a-z'`.
+- I practiced more examples with `echo` and `tr`.
+
+## What I Learned
+
+- `tr` means translate characters.
+- It replaces one set of characters with another.
+- It does not change the original file.
+- It only changes the output on the terminal.
+
+## My Observation
+
+- `tr` is very useful for converting uppercase
+ to lowercase and lowercase to uppercase.
+- It is useful when working with text
+ before searching or processing it.
+
+## Real-world Use
+
+- Convert log files to lowercase before searching.
+- Normalize text for scripts.
+- Format text for automation.
+
+## Challenge Completed
+
+✔ Converted uppercase to lowercase.
+✔ Converted lowercase to uppercase.
+✔ Understood that `tr` does not modify the original file.
+✔ Practiced using `echo`, `cat`, and `tr` together.
