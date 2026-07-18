@@ -1,0 +1,5 @@
+hellototal 7
+-rw-------. 1 u0_a865 u0_a865    0 Jul 18 15:57 README.md
+drwx------. 2 u0_a865 u0_a865 3488 Jul 18 15:57 files
+drwx------. 2 u0_a865 u0_a865 3488 Jul 18 15:57 notes
+-rw-------. 1 u0_a865 u0_a865    0 Jul 18 16:12 output.txt

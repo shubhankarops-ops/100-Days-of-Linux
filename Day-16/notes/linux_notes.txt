@@ -1,0 +1,53 @@
+# Day 16 - tee Command Notes
+
+## Commands Learned
+
+- tee
+- tee -a
+- echo
+- cat
+
+## Mistakes I Made
+
+1. At first, I thought `tee` and `>` were exactly the same.
+
+2. I was confused about when `tee` needs
+  a pipe (`|`) and when it can take input directly.
+
+3. I wasn't sure why `tee -a` keeps old content but
+  `tee` replaces it.
+
+## How I Fixed Them
+
+- I tested every command in Termux.
+- I compared `echo`, `>`, `tee`, and `tee -a`.
+- I also used `tee` interactively by typing text
+ directly into the terminal.
+
+## What I Learned
+
+- `tee` displays output on the screen and saves
+  it into a file.
+- `tee -a` appends new data instead of replacing the file.
+- `>` replaces the file content.
+- `>>` appends without showing the output.
+- `tee` is useful when I want both screen
+ output and file output together.
+
+## My Observation
+
+Doing practical experiments made the difference
+ between `tee`, `>`, and `>>` much easier
+to understand than only reading documentation.
+
+## Real-world Use
+
+- Save logs while monitoring output.
+- Debug scripts.
+- Record command output.
+- Keep installation logs.
+
+## Challenge Completed
+
+✅ I successfully compared `tee`, `tee -a`, `>`,
+and `>>` by testing each command myself.
