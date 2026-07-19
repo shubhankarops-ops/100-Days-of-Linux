@@ -1,0 +1,28 @@
+# Linux Notes - Day 17
+
+Command: history
+
+Purpose:
+Shows previously executed commands.
+
+Examples:
+
+history
+Shows all command history.
+
+history 10
+Shows the last 10 commands.
+
+!!
+
+Runs the previous command again.
+
+!25
+
+Runs command number 25 from history.
+
+Useful for:
+- Reusing old commands.
+- Saving typing time.
+- Finding forgotten commands.
+- Debugging mistakes.
