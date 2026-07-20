@@ -1,0 +1,24 @@
+Day 18 - Linux find Command Notes
+
+1. find . = Search from the current directory.
+
+2. find . -type f
+   - Shows only files.
+
+3. find . -type d
+   - Shows only directories (folders).
+
+4. find . -name "linux.txt"
+   - Finds a specific file by name.
+
+5. find . -name "*.txt"
+   - Finds all files ending with .txt.
+
+Mistakes I Made
+
+1. I thought ls -R shows only folders.
+   Correction:
+   ls -R shows both files and folders recursively.
+
+2. The dot (.) means the current directory.
+   The search starts from wherever I am currently working.
