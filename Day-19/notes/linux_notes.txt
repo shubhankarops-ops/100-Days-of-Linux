@@ -1,0 +1,36 @@
+# Linux Notes - Day 19
+
+## Commands Learned
+
+- wc
+- wc -l
+- wc -w
+- wc -c
+
+## What I Learned
+
+1. `wc` counts lines, words, and characters.
+2. `wc -l` shows the number of lines.
+3. `wc -w` shows the number of words.
+4. `wc -c` shows the number of characters (bytes).
+5. `wc file1 file2` counts both files and displays the total.
+6. Before opening a large file with
+ `cat`, use `wc -l` to check the number of lines.
+7. If a file is very large, use 
+ `head` or `tail` instead of `cat`.
+
+## Mistakes I Made
+
+1. Typed `mkdit` instead of `mkdir`.
+2. Ran `wc` without a filename.
+I learned that it waits for keyboard
+ input and this is normal behavior.
+3. Learned to verify the actual terminal
+output instead of guessing example values.
+
+## Real-world Use
+
+The `wc` command is useful for checking file
+size and content statistics before processing
+large files. It is commonly used by
+Linux administrators, DevOps engineers, and developers.
