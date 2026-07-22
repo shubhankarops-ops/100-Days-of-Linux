@@ -1,0 +1,80 @@
+#Day 20 - Linux File Permissions (chmod)
+
+1. ls -l
+   Shows file permissions.
+
+2. Permission Types
+
+r = Read
+- Read/view file contents.
+
+w = Write
+- Edit or modify a file.
+
+x = Execute
+- Run a file as a program or script.
+
+3. chmod
+
+chmod +r file
+Add read permission.
+
+chmod -r file
+Remove read permission.
+
+chmod +w file
+Add write permission.
+
+chmod -w file
+Remove write permission.
+
+chmod +x file
+Add execute permission.
+
+chmod -x file
+Remove execute permission.
+
+4. Example
+
+chmod +x files/script.sh
+./files/script.sh
+
+5. Important
+
+Without read permission:
+cat file
+Permission denied
+
+Without execute permission:
+./script.sh
+Permission denied
+
+6. Check permissions
+
+ls -l files/script.sh
+
+Always check permissions before changing them.
+
+## Day 20 Mistakes
+
+1. Typed:
+chomd
+Correct:
+chmod
+
+2. Typed:
+files/scriot.sh
+Correct:
+files/script.sh
+
+3. Typed:
+chmod chmod -w files/script.sh
+Correct:
+chmod -w files/script.sh
+
+4. Always check permissions with:
+ls -l filename
+
+5. After changing permissions, verify by testing:
+cat file
+./script.sh
