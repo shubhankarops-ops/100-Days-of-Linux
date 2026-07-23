@@ -1,0 +1,44 @@
+Day 21 - Mega Linux Mission #2
+
+Commands Practiced
+
+1. find
+- Search files and folders.
+
+2. wc
+- Count lines, words and characters.
+
+3. head
+- Show beginning of a file.
+
+4. tail
+- Show end of a file.
+
+5. grep
+- Search matching text.
+
+6. sort
+- Sort lines alphabetically.
+
+7. uniq
+- Remove duplicate adjacent lines.
+
+8. cut
+- Extract specific fields.
+
+9. chmod
+- Change file permissions.
+
+10. tee
+- Save output to a file and display it.
+
+11. history
+- View previously executed commands.
+
+Mistakes Learned
+
+- Typing mistakes like monitor.sh and report/report.txt
+ cause errors.
+- Files cannot be opened using cd.
+- Always verify paths with ls -R before working.
+- Use !number without spaces to rerun a command.
