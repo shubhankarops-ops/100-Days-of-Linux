@@ -1,0 +1,37 @@
+Server Checked
+Logs Verified
+Users Verified
+Backup Completed
+Mission Completed Successfully
+.:
+backup
+logs
+reports
+scripts
+scripts2
+users
+users2
+
+./backup:
+
+./logs:
+auth.log
+error.log
+system.log
+
+./reports:
+report.txt
+
+./scripts:
+backup.sh
+monitor.sh
+
+./scripts2:
+backup.sh
+monitor.sh
+
+./users:
+usee.txt
+
+./users2:
+usee.txt

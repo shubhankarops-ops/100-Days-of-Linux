@@ -1,0 +1,32 @@
+Linux Notes - Day 22
+
+1. cp = Copy files or folders.
+
+2. cp file1 file2
+   Copies one file.
+
+3. cp -r folder backup
+   Copies a complete folder.
+
+4. Use cp when you want to keep the original file.
+
+5. Use mv when you want to move or rename a file.
+
+6. tee
+   Displays output on screen and saves it to a file.
+
+Example:
+
+echo "Hello Linux" | tee report.txt
+
+7. tee -a
+   Appends text without deleting old content.
+
+8. sort | uniq
+   Shows only unique values from sorted data.
+
+9. find . -name "*.log"
+   Finds all log files.
+
+10. history
+    Shows previously executed commands.
