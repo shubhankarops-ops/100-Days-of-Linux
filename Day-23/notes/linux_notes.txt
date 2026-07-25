@@ -1,0 +1,57 @@
+Linux Notes - Day 23
+
+1. find . -name "*.sh"
+   Filters files strictly by extension.
+   Even with 500 .log files present,
+   this ignores all of them and shows only .sh files.
+
+2. sort | uniq
+   sort arranges lines alphabetically.
+   uniq then removes consecutive duplicate lines.
+   Example: sort logs/security.log | uniq
+   -> ERROR, Firewall, INFO, Linux, SSH (each shown once)
+
+3. sort | uniq -c
+   Same as above, but adds a count of
+   how many times each line appeared.
+   Example: sort logs/security.log | uniq -c
+   -> 3 ERROR
+      3 Firewall
+      2 INFO
+      3 Linux
+      3 SSH
+
+4. tee vs >
+   tee   -> shows output on screen AND saves it to a file.
+   >     -> only saves to a file, nothing shown on screen.
+
+5. cp vs mv
+   cp    -> use when the original file/folder 
+            must stay in place (backups).
+            cp -r folder folder_backup
+   mv    -> use when moving a file to a different folder,
+            or renaming it.
+            The file no longer exists in its old location
+            afterward.
+
+6. chmod +x / chmod -x / chmod 740
+   chmod +x file   -> adds execute permission
+   chmod -x file   -> removes execute permission
+   chmod 740 file  -> owner: rwx, group: r--, others: ---
+   Always verify with: ls -l file
+
+7. grep -o "ERROR" logs/*.log | wc -l
+   -o prints only the matched word
+   (not the whole line), once per match,
+   across all given files. Piping to wc -l
+   counts total matches.
+
+8. grep -c "ERROR" logs/*.log
+   Counts matching lines PER FILE
+   (prints filename: count for each file).
+
+9. Debugging a script that won't run:
+   Step 1: ls -l <script>  -> check if execute (x)
+   permission is set
+   Step 2: chmod +x <script>  -> add it if missing
+   Step 3: run it again with ./script.sh
