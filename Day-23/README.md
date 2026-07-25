@@ -9,6 +9,7 @@ no notes, pure reasoning.
 ## Project Structure
 Code
 
+```
 Company-Server/
 ├── logs/
 │   ├── access.log
@@ -23,6 +24,8 @@ Company-Server/
 ├── backup/
 └── reports/
     └── report.txt
+```
+
 
 ## Commands Practiced
 
