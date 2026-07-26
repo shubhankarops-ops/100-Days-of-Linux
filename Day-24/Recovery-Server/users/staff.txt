@@ -1,0 +1,7 @@
+Rahul:Linux
+Aman:Docker
+Riya:Python
+Neha:Cloud
+Arjun:DevSecOps
+Sara:Git
+Rohit:Networking

@@ -1,0 +1,61 @@
+Linux Notes - Day 24 (Advanced)
+
+1. find . -type f  vs  find . -type d
+   -type f  -> lists only files (ignores directories)
+   -type d  -> lists only directories (ignores files)
+   Pipe either to `wc -l` to get a count instead of a list.
+
+2. grep -o "WORD" file | wc -l
+   -o prints each match on its own line
+   (not the whole line it's found in).
+   Piping to wc -l counts total occurrences,
+   even if a word appears
+   multiple times on the same line.
+   This is more accurate than grep -c,
+   which only counts matching LINES per file,
+   not total matches.
+
+3. sort file | uniq -d   vs   sort file | uniq -u
+   uniq -d  -> shows ONLY lines that repeat (duplicates)
+   uniq -u  -> shows ONLY lines that appear
+   exactly once (true unique)
+   Plain `uniq` (no flag) shows every
+   distinct line once, regardless of
+   how many times it repeated.
+
+4. chmod +x/-x  vs  chmod (numeric, e.g. 740)
+   +x / -x   -> toggles ONLY the execute bit;
+   read/write stay as they were
+   740       -> REPLACES the entire permission set
+                in one shot:
+                7 = owner (rwx), 4 = group (r--),
+                0 = others (---)
+   Rule of thumb: use +x/-x for a quick toggle,
+   use numeric mode when you
+   need to set an exact, specific permission state.
+
+5. tee vs tee -a
+   tee     -> overwrites the file with new output
+              (and still shows on screen)
+   tee -a  -> appends to the file instead of
+              overwriting (and shows on screen)
+
+6. head and tail (real-world use)
+   head file        -> first 10 lines, quick look
+                       at file format/headers
+   tail file        -> last 10 lines, most log-reading
+                       starts here
+   tail -f file.log -> "follow" mode — streams new lines
+                        live as they're
+                        written; standard tool for
+                        watching an active log
+                        during an incident
+
+7. Debugging without knowing file path/name
+        Step 1: find . -name "*.ext"
+   (search by whatever detail you DO know — 
+          usually the extension)
+  
+  Step 2: narrow down further with -type f
+       if directories are cluttering
+                the output
