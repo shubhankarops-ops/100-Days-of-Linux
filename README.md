@@ -31,13 +31,14 @@ I am documenting my journey of learning Linux through daily hands-on practice, p
 
 ## 📂 Repository Structure
 
+```
 100-Days-of-Linux/
 ├── README.md
 ├── Day-01/
 ├── Day-02/
 ├── Day-03/
 └── ...
-
+```
 ## 📚 What You'll Find
 
 - Daily learning notes
