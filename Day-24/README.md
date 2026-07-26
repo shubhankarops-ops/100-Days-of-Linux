@@ -1,6 +1,6 @@
 # Day 24 - Mega Linux Mission #5
 
-##Scenario: Production Server Recovery
+## Scenario: Production Server Recovery
 
 A company server crashed and has been recovered.
 Files are scattered across
@@ -8,11 +8,11 @@ directories. Task: inspect the server,
 investigate the mess, and produce a
 report — without being told which commands to use.
 
-##Role
+## Role
 
 Junior Linux System Administrator
 
-##Project Structure
+## Project Structure
 
 Code
 
@@ -56,7 +56,7 @@ Recovery-Server/
 | Re-run a past command | `!<number>` | Recalls and re-executes a specific line from history without retyping it |
 
 
-##Investigation Results
+## Investigation Results
 
 1. .log files found: app.log, auth.log,
    network.log, temp/old.log
