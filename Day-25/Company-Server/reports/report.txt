@@ -1,0 +1,18 @@
+ERROR
+ERROR
+ERROR
+ERROR
+WARNING
+WARNING
+INFO
+WARNING
+Linux
+Docker
+Git
+INFO
+INFO
+Python
+Cloud
+DevSecOps
+
+mission summsry

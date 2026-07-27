@@ -1,0 +1,72 @@
+Linux Notes - Day 25
+
+1. uniq -d  (this is the one to
+   remember — repeated mistake fixed here)
+   sort file | uniq -d
+   -> shows ONLY lines that appear more
+   than once (true duplicates).
+   Lines that appear just once are hidden from the output.
+
+   Compare:
+   sort file | uniq       -> every distinct line,
+                             shown once each
+  
+   sort file | uniq -c    -> every distinct line,
+                             WITH a count prefix.
+                   (includes lines thatbonly appeared once)
+   
+   sort file | uniq -d    -> ONLY the lines that repeated
+   
+   sort file | uniq -u    -> ONLY the lines that
+                             appeared exactly once
+
+2. Script won't run even after chmod +x — deeper checklist
+
+   Step 1: ls -l script.sh          -> confirm execute
+                                       bit is really set
+
+   Step 2: head -1 script.sh        -> check the
+	                               shebang line exists
+                                       and is correct
+                                       (#!/bin/bash)
+   
+   Step 3: bash -n script.sh        -> checks for 
+                                       syntax errors WITHOUT
+                                       running the script
+   Step 4: bash script.sh           -> run it explicitly
+                                       through bash to
+                                       see the real
+                                       error message
+  
+   Step 5: confirm you're calling it as
+  ./script.sh (not just script.sh,
+           which only works if the script's
+                 folder is in $PATH)
+
+3. tee vs tee -a (recap, now applied correctly)
+   tee     -> overwrites the file, still
+                shows output on screen
+   tee -a  -> appends to the file, still shows
+              output on screen
+   Use tee -a whenever old content in the
+              file must be preserved.
+
+4. Mistake to avoid: chmod on the wrong target
+   
+   chmod +x only makes sense on files
+   meant to be EXECUTED (scripts,
+   binaries). Log files, text files,
+   and data files never need execute
+   permission — running chmod +x on
+   them is a red flag during a real
+   review, even though it doesn't break
+   anything technically.
+
+5. Data quality check before running extraction commands
+   
+   Before using cut/grep/sort on a file,
+   always cat the file first to
+   confirm it actually has real data
+   in it — not just a header line.
+   A command "working" (no error)
+   doesn't mean the DATA was correct.
