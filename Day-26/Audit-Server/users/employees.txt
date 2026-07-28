@@ -1,0 +1,8 @@
+Doli:Linux
+Ramesh:Git
+Raj:Docker
+shubhankar:Python
+Raju:Networking
+Lipe:bus script
+joy:server handling
+Aakash:programming

@@ -1,0 +1,68 @@
+Linux Notes - Day 26
+
+1. uniq -cd (combining flags — the answer
+   that was missing 3 days running)
+   sort file | uniq -cd
+   -> shows ONLY duplicate lines, each with its count.
+   Breakdown of what each flag alone does:
+     uniq        -> every distinct line once,
+                    no counts, no filtering
+     uniq -c     -> every distinct line WITH
+                    a count (includes singles)
+     uniq -d     -> ONLY duplicates, no count shown
+     uniq -cd    -> ONLY duplicates, WITH a count
+                    <- this is the one
+                    that answers "find duplicates
+                    AND show their count"
+
+2. grep -c vs grep -o | wc -l (practical difference,
+   not just definitions)
+   grep -c "X" file        -> counts matching LINES
+                              (one line with 2
+                               matches still counts as 1)
+   grep -o "X" file | wc -l -> counts every
+                               individual MATCH/occurrence
+                               (one line with 2
+                                matches counts as 2)
+   Use -c for a quick per-file summary.
+   Use -o | wc -l when the exact
+   number of occurrences matters
+   (e.g. security audit counts).
+
+3. grep -o without word boundaries can mislead
+   grep -o "INFO" file matches "INFO"
+   even inside "INFOO", "INFORMATION",
+   etc, because it matches the substring
+   anywhere it appears.
+   Fix: grep -ow "INFO" -> -w forces a
+   whole-word match only.
+   Lesson: always sanity-check unique/count
+   output against the raw file
+   if a count looks off — a single typo
+   in source data can silently
+   distort every metric downstream.
+
+4. Filename discipline
+   A file named "updata.sh" instead of
+   "update.sh" looks harmless in
+   isolation, but any script or automation
+   that hardcodes the correct
+   name will fail to find it.
+   Always double check filenames against the
+   spec/requirement before running investigation
+   commands against them.
+
+5. Recovering from a reversed cp
+   cp -r backup scripts   (WRONG direction
+   — copies backup INTO scripts)
+   Fix sequence used:
+     ls -R                 -> confirm the mistake visually
+     cd scripts && rm -r backup   -> remove the
+          bbb                        wrongly-copied folder
+     cd .. && cp -r scripts backup -> run it in the
+                                      correct direction
+   This is a normal part of real admin
+   work — catching and reversing a
+   mistake safely before it causes damage
+   matters more than never making
+   one.
