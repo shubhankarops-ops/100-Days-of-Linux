@@ -1,0 +1,41 @@
+Linux Notes - Day 27
+
+1. Why unquoted | breaks a grep -E pattern (today's big lesson)
+   grep -iE ERROR|WARNING|FAILED LOGIN        <- WRONG
+   The shell reads this BEFORE grep ever sees it. Every unquoted | is
+   treated as a literal pipe between two commands. So the shell tries
+   to run "WARNING" as its own program -> "command not found".
+
+   grep -Ei "ERROR|WARNING|FAILED LOGIN" logs/*.log | wc -l   <- RIGHT
+   Quotes force the shell to treat the whole pattern as ONE argument.
+   Only then does grep's -E (extended regex) get to interpret the |
+   as "OR" inside the pattern itself.
+
+   Rule of thumb: any time a regex pattern has a special shell character
+   in it ( | * ? $ ( ) ), wrap the pattern in quotes.
+
+2. Still pending — do these before Day 28
+   - Total files:   find . -type f | wc -l
+   - Total folders: find . -type d | wc -l
+   These have been listed-but-not-counted for 4 days running now.
+
+3. Final Boss hints to think through (answers not filled in yet)
+   Q1: 200 log files, only FAILED LOGIN entries -> which flag combo
+       shows file name + line number across many files at once?
+   Q2: find -type f vs find -name "*.log" -> one filters by WHAT something
+       is, the other by its NAME. What happens if both are used together
+       in one command?
+   Q3: chmod 755 vs chmod +x -> decode 755 digit by digit (owner/group/
+       others) the same way 740 was decoded on Day 24.
+   Q4: verifying backup after original is deleted -> counting files on
+       both sides isn't possible anymore since one side is gone. What
+       else could confirm a copy matches the source (recorded earlier)?
+   Q5: most-repeated entries -> uniq -c gives a count but in file order,
+       not ranked. Which command sorts by count, and in which direction?
+
+4. Data hygiene reminder
+   A leading space in a value (" cloud engineer" instead of
+   "cloud engineer") or a truncated word ("Networ") looks like a small
+   thing but breaks exact-match searches later (grep "cloud engineer"
+   would miss the line with the leading space). Proofread data files
+   before running extraction commands on them.

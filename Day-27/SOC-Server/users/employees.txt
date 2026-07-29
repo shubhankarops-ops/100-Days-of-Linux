@@ -1,0 +1,11 @@
+Raju:Linux
+Gopal:Linux engineer
+shubhankar:Git 
+Lipe:Github
+Sam:Networ
+author:Networking
+Goku:Linux engineer
+Deepak:docker
+joy:Ai engineer
+Doli: cloud engineer
+Jin:cyber security
