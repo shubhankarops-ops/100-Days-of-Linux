@@ -1,0 +1,38 @@
+Linux Notes - Day 28
+
+1. grep -n vs grep -rn (corrected today)
+   grep -n "pattern" logs/*.log   -> searches only files matched by the
+                                      glob, in that directory level, with
+                                      line numbers shown.
+   grep -rn "pattern" .           -> -r makes it RECURSIVE: searches every
+                                      file in every subdirectory from the
+                                      given path downward, also with line
+                                      numbers. Use -r whenever you don't
+                                      know exactly which subfolder a match
+                                      might be in.
+
+2. tail vs tail -f (corrected today)
+   tail file      -> one-time snapshot: last 10 lines (or -N for a custom
+                      count), then stops.
+   tail -f file   -> "follow" mode: keeps the terminal open and prints
+                      each new line as it's written to the file. This is
+                      the standard tool for watching a log live during an
+                      active incident, not just checking recent history.
+
+3. find . -type f -empty
+   Finds files (not directories) that are exactly 0 bytes. Useful for
+   catching files that were created (touch) but never actually filled
+   with data — a common setup mistake worth checking for before trusting
+   any analysis on those files.
+
+4. Still pending — apply next time
+   Every "kitni baar" (how many times) question should end with
+   | wc -l for an exact number, not just a list of matches. This applies
+   to word/phrase counts (FAILED LOGIN, SSH, Linux, etc.) just as much as
+   it applies to file/folder counts.
+
+5. Real-world reminder from today's setup mix-up
+   Creating files in the wrong folder and needing several mv commands to
+   fix it is normal — the important habit is running ls (or ls -R) after
+   each move to confirm the result before moving on, which is exactly
+   what happened here.
