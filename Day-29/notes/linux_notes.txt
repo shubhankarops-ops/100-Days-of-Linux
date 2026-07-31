@@ -1,0 +1,46 @@
+Linux Notes - Day 29 (Wildcards Deep Dive)
+
+1. * (star) - zero or more of ANY character
+   *.log       -> any name, ending in .log
+   a*          -> any name starting with "a" (any/no extension)
+   a*.log      -> BOTH: starts with "a" AND ends in .log
+
+2. ? (question mark) - EXACTLY one character
+   *.???       -> exactly 3 characters after the dot (.log, .txt, .tmp
+                  match; .conf does NOT, since conf is 4 characters)
+   file?.txt   -> file1.txt matches, file10.txt does NOT (two characters
+                  where only one is allowed)
+
+3. [] (square brackets) - one character FROM A SET
+   file[123].txt   -> matches file1.txt, file2.txt, file3.txt only
+   [a-z]*          -> matches anything starting with a lowercase letter
+
+4. Where the wildcard has to go
+   CORRECT:   find . -name "*.txt"
+   WRONG:     find . -type f "*.txt"
+   The pattern must be the argument to -name, in quotes. Passing it as
+   a bare extra argument makes find treat it as a path to search, which
+   causes a syntax error ("paths must precede expression").
+
+5. A wildcard needs the * to actually BE a wildcard
+   .conf     -> this is a LITERAL filename (a hidden file called
+                exactly ".conf") — it does not mean "anything ending
+                in .conf". It will fail with "No such file or
+                directory" because no file is actually named that.
+   *.conf    -> THIS is the wildcard — matches every file ending in
+                .conf, however many there are.
+
+6. cp -r (whole folder) vs cp with wildcard (selected files only)
+   cp -r configs backup        -> copies the ENTIRE configs folder,
+                                   nested as backup/configs/*.conf
+   cp configs/*.conf backup/   -> copies ONLY the matching files,
+                                   directly into backup/ with no extra
+                                   nested folder in between
+   Use the wildcard version when the goal is "just these files," not
+   "the whole folder as-is."
+
+7. Real point of a wildcard (the "why")
+   Without a wildcard, backing up 3 .conf files means typing 3 cp
+   commands (or 3 filenames in one). With a wildcard, one pattern
+   selects all of them regardless of how many there are — this is
+   exactly why wildcards matter more as file counts grow.
