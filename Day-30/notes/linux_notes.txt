@@ -1,0 +1,42 @@
+Linux Notes - Day 30 (Redirection & Pipes)
+
+1. > vs >> vs 2>
+   >    -> overwrite the file with new output (old content is gone)
+   >>   -> append new output, keeping what's already there
+   2>   -> redirect ONLY the error stream (stderr) to a file; normal
+            output (stdout) still appears on screen
+   command > out.log 2> err.log   -> normal output and errors split
+                                      into two separate files at once
+
+2. | (pipe) only connects to a COMMAND, never directly to a file
+   WRONG:   find . -name "*.log" | reports/report.txt
+            (shell tries to RUN "reports/report.txt" as a program)
+   RIGHT:   find . -name "*.log" | tee -a reports/report.txt
+            (tee is a command — it accepts piped input and writes it
+            to a file, while also printing it to the screen)
+   To send straight to a file with no pipe involved, use > or >> instead.
+
+3. cut needs TEXT LINES as input, not a folder path directly
+   WRONG:   cut -d. -f1 logs              (logs is a directory)
+   RIGHT:   ls logs | cut -d. -f1         (ls turns the folder into a
+                                            list of text lines first)
+
+4. mv rename-vs-move-into behavior
+   mv source destination
+   - If destination already exists as a FOLDER -> source moves INSIDE it
+   - If destination does NOT exist -> source gets RENAMED to that name
+   This is why `mv backup ../Log-Lab` (when ../Log-Lab didn't exist yet)
+   renamed the backup folder to "Log-Lab" instead of moving it up a
+   level. To just delete an accidental copy, use `rm -r foldername`
+   instead of trying to mv it somewhere.
+
+5. Why saving big output to a file beats reading it on screen
+   - Terminal scrollback is limited and awkward to search
+   - A saved file can be grepped, sorted, or counted again later
+   - Useful for reports/incidents that need to be reviewed or shared
+     without re-running the original command
+
+6. Data typo watch: merged words break exact counts
+   "LinuxERROR" (no space) gets counted by BOTH `grep -o "Linux"` and
+   `grep -o "ERROR"` since grep -o matches substrings, not whole words.
+   Always glance at raw data before trusting a count that looks off.
