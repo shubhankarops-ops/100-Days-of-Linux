@@ -1,0 +1,37 @@
+Linux Notes - Day 31
+
+1. The ranking pipeline (now proven in real use)
+   grep "PATTERN" logs/*.log | sort | uniq -c | sort -nr
+   - grep (no -n) prints "filename:match" for every hit
+   - sort groups identical filename:match lines together
+   - uniq -c counts how many times each identical line appears
+   - sort -nr ranks those counts from highest to lowest
+   Result: an exact, ranked breakdown of which file has the most
+   occurrences of something — this is how Q1 was proven today.
+
+2. Verifying a backup vs investigating a deletion (different questions)
+   "Is the backup valid?"    -> check the BACKUP COPY directly:
+                                  ls backup/configs/server.conf
+                                  diff configs/server.conf backup/configs/server.conf
+   "Who/how was it deleted?" -> check HISTORY for the command that
+                                  removed it: history | grep rm
+   These solve different problems — don't reach for history when the
+   question is really about confirming a backup's integrity.
+
+3. nano vs head/tail vs grep on a huge file (e.g. 50 GB)
+   nano       -> NEVER for huge files — tries to load everything into
+                 memory, will hang or crash.
+   head/tail  -> safe, fast look at the start or end only.
+   grep       -> safe for searching ANYWHERE inside the file — it reads
+                 line by line (streams) instead of loading the whole
+                 file, so it doesn't have nano's problem. head/tail and
+                 grep aren't competitors — one is for glancing, the
+                 other is for searching.
+
+4. Still open
+   - Backup step needs to actually run this time:
+     cp -r configs backup
+   - When a question asks for a single total (not "which file has
+     most"), remember grep -o "X" logs/*.log | wc -l still has its
+     place alongside the ranked sort|uniq -c|sort -nr breakdown —
+     use whichever the question is actually asking for.

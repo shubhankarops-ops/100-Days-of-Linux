@@ -1,0 +1,45 @@
+./logs/auth.log
+./logs/access.log
+./logs/firewall.log
+./logs/system.log
+.:
+archive
+backup
+configs
+logs
+reports
+scripts
+temp
+users
+
+./archive:
+
+./backup:
+
+./configs:
+network.conf
+server.conf
+
+./logs:
+access.log
+auth.log
+firewall.log
+system.log
+
+./reports:
+security_report.txt
+
+./scripts:
+backup.sh
+cleanup.sh
+monitor.sh
+
+./temp:
+
+./users:
+employees.txt
+/data/data/com.termux/files/home/100-Days-of-Linux/Day-31/Security-Lab
+     12 logs/firewall.log:Linux
+      8 logs/system.log:Linux
+      3 logs/auth.log:Linux
+      3 logs/access.log:Linux
