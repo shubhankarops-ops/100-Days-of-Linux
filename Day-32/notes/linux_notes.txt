@@ -1,0 +1,40 @@
+Linux Notes - Day 32
+
+1. tee needs a FILE target, not a directory
+   find . -name "*.conf" | tee -a backup   -> fails: "Is a directory"
+   tee writes into a specific file, and only lists/echoes what's piped
+   to it — it does NOT copy the actual files being listed. For an
+   actual backup of matching files, use cp with a wildcard instead:
+   cp configs/*.conf backup/
+
+2. uniq only has -c / -d / -u — NOT -n or -r
+   sort logs/access.log | uniq -nr   -> invalid option
+   -n (numeric) and -r (reverse) belong to sort. Frequency ranking is
+   always a two-command combo:
+   sort file | uniq -c | sort -nr
+
+3. grep -l vs grep -L (self-discovered this session)
+   grep -l "pattern" logs/*.log   -> lists only FILE NAMES that contain
+                                      at least one match (not the lines)
+   grep -L "pattern" logs/*.log   -> lists only FILE NAMES that contain
+                                      NO match at all
+   Useful whenever the question asks for "which files" rather than
+   "which lines."
+
+4. Verifying a backup vs investigating the original (recurring mix-up)
+   "Is my backup trustworthy before I restore from it?"
+     -> check the BACKUP folder's own contents/count:
+        ls -R backup/configs
+   "What happened to the original / who deleted it?"
+     -> check history, not the backup
+   These keep getting confused — the deciding question to ask: does
+   this need to look INSIDE the backup, or OUTSIDE at what happened to
+   the original? Restore-readiness questions are always about the
+   backup itself.
+
+5. tail -6 vs tail -n 6
+   tail -6 file        -> usually works, but failed in this session
+                           ("option used in invalid context")
+   tail -n 6 file       -> the explicit, always-safe form
+   When a short flag misbehaves, the long/explicit form (-n <number>)
+   is the more reliable fallback.

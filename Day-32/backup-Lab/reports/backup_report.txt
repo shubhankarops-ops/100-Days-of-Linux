@@ -1,0 +1,35 @@
+      1 ==> logs/access.log <==
+      1 ERROR
+      1 WARNING
+      1 INFO
+      1 FAILED LOGIN
+      1 SUCCESS LOGIN
+      1 SSH
+      1 ERROR
+      1 WARNING
+      1 INFO
+      1 FAILED LOGIN
+      1 
+      1 ==> logs/auth.log <==
+      1 yy
+      1 Docker
+      1 ERROR
+      1 FAILED LOGIN
+      1 INFO
+      1 Linux
+      1 Python
+      1 SSH
+      1 SUCCESS LOGIN
+      1 WARNING
+      1 
+      1 ==> logs/system.log <==
+      1 ERROR
+      1 WARNING
+      1 INFO
+      1 FAILED LOGIN
+      1 SUCCESS LOGIN
+      1 SSH
+      1 ERROR
+      1 WARNING
+      1 INFO
+      1 FAILED LOGIN
